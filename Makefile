@@ -1,10 +1,10 @@
-CC	:= gcc
+CC	:= cc
 SRCS	:= real.c
 PREFIX	:= /usr/
 BINDIR	:= $(PREFIX)/bin
 
 all: real 
-	gcc -std=c99 -O2 -march=native -o real real.c
+	cc -std=c99 -O2 -march=native -o real real.c
 install: real
 	rm -f /usr/bin/true;
 	cp real /usr/bin/real;
